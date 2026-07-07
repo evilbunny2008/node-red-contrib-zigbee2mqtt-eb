@@ -1,7 +1,7 @@
 const Zigbee2mqttHelper = require('../resources/Zigbee2mqttHelper.js');
 var mqtt = require('mqtt');
-var Viz = require('viz.js');
-var {Module, render} = require('viz.js/full.render.js');
+var Viz = require('@viz-js/viz');
+var vizInstancePromise = Viz.instance();
 
 module.exports = function(RED) {
     class ServerNode {
@@ -421,7 +421,7 @@ module.exports = function(RED) {
             var options = {
                 format: 'svg', engine: engine ? engine : 'circo',
             };
-            var viz = new Viz({Module, render});
+            var viz = await vizInstancePromise;
             return node.map = await viz.renderString(payload, options);
         }
 
@@ -446,7 +446,7 @@ module.exports = function(RED) {
             let msg = opts.msg;
             let payload = null;
             let payload_all = null;
-            let text = RED._("node-red-contrib-zigbee2mqtt/server:status.received");
+            let text = RED._("node-red-contrib-zigbee2mqtt-eb/server:status.received");
             let item = this.getDeviceOrGroupByKey(opts.key);
 
             if (item) {
@@ -458,7 +458,7 @@ module.exports = function(RED) {
                 node.status({
                     fill: "red",
                     shape: "dot",
-                    text: "node-red-contrib-zigbee2mqtt/server:status.no_device"
+                    text: "node-red-contrib-zigbee2mqtt-eb/server:status.no_device"
                 });
                 return;
             }
@@ -577,7 +577,7 @@ module.exports = function(RED) {
             let msg = opts.msg;
             let payload = {};
             let math = [];
-            let text = RED._("node-red-contrib-zigbee2mqtt/server:status.received");
+            let text = RED._("node-red-contrib-zigbee2mqtt-eb/server:status.received");
 
             for (let index in node.config.device_id) {
                 let item = that.getDeviceOrGroupByKey(node.config.device_id[index]);
@@ -606,7 +606,7 @@ module.exports = function(RED) {
                 node.status({
                     fill: "red",
                     shape: "dot",
-                    text: "node-red-contrib-zigbee2mqtt/server:status.no_device"
+                    text: "node-red-contrib-zigbee2mqtt-eb/server:status.no_device"
                 });
                 return;
             }

@@ -74,10 +74,10 @@ class Zigbee2MqttEditor {
             dropWidth: 320,
             width: 320,
             filter: true,
-            formatAllSelected:function(){return RED._("node-red-contrib-zigbee2mqtt/server:editor.select_device")}
+            formatAllSelected:function(){return RED._("node-red-contrib-zigbee2mqtt-eb/server:editor.select_device")}
         };
         if (that.config.allow_empty && !that.isMultiple()) {
-            params.formatAllSelected = function(){return RED._("node-red-contrib-zigbee2mqtt/server:editor.msg_topic")};
+            params.formatAllSelected = function(){return RED._("node-red-contrib-zigbee2mqtt-eb/server:editor.msg_topic")};
         }
 
         that.getDeviceIdInput().children().remove();
@@ -94,7 +94,7 @@ class Zigbee2MqttEditor {
         //groups
         let groups = data[1];
         if (groups.length) {
-            html = $('<optgroup/>', {label: RED._("node-red-contrib-zigbee2mqtt/server:editor.groups")});
+            html = $('<optgroup/>', {label: RED._("node-red-contrib-zigbee2mqtt-eb/server:editor.groups")});
             html.appendTo(that.getDeviceIdInput());
             $.each(groups, function(index, value) {
                 let text = '';
@@ -109,7 +109,7 @@ class Zigbee2MqttEditor {
         //devices
         let devices = data[0];
         if (devices.length) {
-            html = $('<optgroup/>', {label: RED._("node-red-contrib-zigbee2mqtt/server:editor.devices")});
+            html = $('<optgroup/>', {label: RED._("node-red-contrib-zigbee2mqtt-eb/server:editor.devices")});
             html.appendTo(that.getDeviceIdInput());
             $.each(devices, function(index, value) {
                 var model = '';
@@ -145,13 +145,13 @@ class Zigbee2MqttEditor {
             single: !(typeof $(this).attr('multiple') !== typeof undefined && $(this).attr('multiple') !== false)
         }).multipleSelect('disable');
 
-        that.getDevicePropertyInput().html('<option value="0">'+ RED._("node-red-contrib-zigbee2mqtt/server:editor.complete_payload")+'</option>');
+        that.getDevicePropertyInput().html('<option value="0">'+ RED._("node-red-contrib-zigbee2mqtt-eb/server:editor.complete_payload")+'</option>');
 
         let html = '';
         let device = that.getDevice();
 
         if (device && 'definition' in device && device.definition && 'exposes' in device.definition) {
-            html = $('<optgroup/>', {label: RED._("node-red-contrib-zigbee2mqtt/server:editor.zigbee2mqtt")});
+            html = $('<optgroup/>', {label: RED._("node-red-contrib-zigbee2mqtt-eb/server:editor.zigbee2mqtt")});
             html.appendTo(that.getDevicePropertyInput());
 
             $.each(device.definition.exposes, function(index, value) {
@@ -170,7 +170,7 @@ class Zigbee2MqttEditor {
         }
 
         if (device && 'homekit' in device && device.homekit && Object.keys(device.homekit).length) {
-            html = $('<optgroup/>', {label: RED._("node-red-contrib-zigbee2mqtt/server:editor.homekit")});
+            html = $('<optgroup/>', {label: RED._("node-red-contrib-zigbee2mqtt-eb/server:editor.homekit")});
             html.appendTo(that.getDevicePropertyInput());
 
             $.each(device.homekit, function (index, value) {
@@ -196,7 +196,7 @@ class Zigbee2MqttEditor {
         // console.log('BUILD buildDeviceOptionsInput');
         let device = that.getDevice();
         let options = [];
-        options.push({'value': 'nothing', 'label': RED._("node-red-contrib-zigbee2mqtt/server:editor.nothing"), options:['']});
+        options.push({'value': 'nothing', 'label': RED._("node-red-contrib-zigbee2mqtt-eb/server:editor.nothing"), options:['']});
         options.push('msg');
         options.push('json');
         if (device && 'definition' in device && device.definition && 'options' in device.definition) {
@@ -379,7 +379,7 @@ class Zigbee2MqttEditor {
             if (!that.device_id) {
                 that.device_id = [];
             }
-            that.getDeviceFriendlyNameInput().val(that.device_id.length + ' ' + RED._("node-red-contrib-zigbee2mqtt/server:editor.selected"));
+            that.getDeviceFriendlyNameInput().val(that.device_id.length + ' ' + RED._("node-red-contrib-zigbee2mqtt-eb/server:editor.selected"));
         } else if (that.device_id && that.device_id.length) {
             if (typeof(that.device_id) == 'object') {
                 that.device_id = that.device_id[0]; //get the first device

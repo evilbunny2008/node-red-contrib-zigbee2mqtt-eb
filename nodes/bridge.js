@@ -29,7 +29,7 @@ module.exports = function(RED) {
                 node.status({
                     fill: "red",
                     shape: "dot",
-                    text: "node-red-contrib-zigbee2mqtt/bridge:status.no_server"
+                    text: "node-red-contrib-zigbee2mqtt-eb/bridge:status.no_server"
                 });
             }
 
@@ -43,7 +43,7 @@ module.exports = function(RED) {
                 node.status({
                     fill: "red",
                     shape: "dot",
-                    text: "node-red-contrib-zigbee2mqtt/bridge:status.no_server"
+                    text: "node-red-contrib-zigbee2mqtt-eb/bridge:status.no_server"
                 });
             }
         }
@@ -73,10 +73,10 @@ module.exports = function(RED) {
                 node.status({
                     fill: "yellow",
                     shape: "ring",
-                    text: "node-red-contrib-zigbee2mqtt/bridge:status.searching"
+                    text: "node-red-contrib-zigbee2mqtt-eb/bridge:status.searching"
                 });
             } else {
-                let text = node.server.bridge_state?RED._("node-red-contrib-zigbee2mqtt/bridge:status.online"):RED._("node-red-contrib-zigbee2mqtt/bridge:status.offline");
+                let text = node.server.bridge_state?RED._("node-red-contrib-zigbee2mqtt-eb/bridge:status.online"):RED._("node-red-contrib-zigbee2mqtt-eb/bridge:status.offline");
                 if (node.server.bridge_info && "log_level" in node.server.bridge_info) {
                     text += ' (log: '+node.server.bridge_info.log_level+')';
                 }
