@@ -251,7 +251,7 @@
                 function getPayloadTypes(command) {
                     let types = ['msg', 'flow', 'global', 'str', 'num', 'json'];
                     let options = [];
-                    if ('state' === command) {
+                    if (command.startsWith("state")) {
                         options = [
                             {'value':'on', 'label':'On'},
                             {'value':'off', 'label':'Off'},
