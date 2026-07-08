@@ -189,19 +189,6 @@ class Zigbee2MqttEditor {
         that.getDevicePropertyInput().multipleSelect('refresh');
     }
 
-    buildLabel(name, property, unit) {
-        let label = name + (unit ? ', ' + unit : '');
-        if (property !== name) {
-            // e.g. property "state_l1" vs name "state" -> suffix "l1"
-            // or property "inching_control_1" vs name "inching_control" -> suffix "1"
-            let suffix = property.slice(name.length).replace(/^_/, '');
-            if (suffix) {
-                label += ' (' + suffix + ')';
-            }
-       }
-       return label;
-    }
-
     buildDeviceOptionsInput() {
         let that = this;
         if (!that.getDeviceOptionsInput()) return;
