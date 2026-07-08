@@ -158,7 +158,6 @@ class Zigbee2MqttEditor {
                 if ('features' in value) {
                     $.each(value.features, function(index2, value2) {
                         if ('property' in value2) {
-                            let endpoint = value.endpoint || value2.endpoint;
                             $('<option value="' + value2.property + '">' + value2.property + (value2.unit ? ', ' + value2.unit : '') + '</option>')
                                 .appendTo(html);
                         }
