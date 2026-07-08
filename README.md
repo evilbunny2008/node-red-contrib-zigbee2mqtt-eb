@@ -50,7 +50,7 @@ cd ..
 node-red
 ```
 
-# Nodes
+# Available nodes
 
 Available nodes are:
 * zigbee2mqtt-in: listen to device
