@@ -13,6 +13,45 @@
 
 Node-Red Nodes for Zigbee2mqtt connectivity.
 
+# Install
+Do the following:
+```
+npm install -g node-red
+mkdir -p /opt/node-red
+useradd -d /opt/node-red -M node-red
+chown -R node-red: /opt/node-red
+su -s /bin/bash - node-red
+mkdir -p .node-red
+cd .node-red
+node-red admin init
+```
+
+Next edit the settings.js to match your server
+```nano settings.js```
+
+Install this package
+```
+npm install node-red-contrib-zigbee2mqtt
+```
+and then you can start Node Red by doing
+```
+cd ..
+node-red
+```
+
+# Updating
+
+To update, you can do the following:
+```
+su -s /bin/bash - node-red
+cd .node-red
+npm update
+cd ..
+node-red
+```
+
+# Nodes
+
 Available nodes are:
 * zigbee2mqtt-in: listen to device
 * zigbee2mqtt-get: get current value of device
