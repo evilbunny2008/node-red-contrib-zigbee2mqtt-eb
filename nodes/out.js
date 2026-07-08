@@ -64,7 +64,7 @@ module.exports = function(RED) {
                                     node.status({
                                         fill: "red",
                                         shape: "dot",
-                                        text: "node-red-contrib-zigbee2mqtt-eb/out:status.no_payload"
+                                        text: "node-red-contrib-zigbee2mqtt/out:status.no_payload"
                                     });
                                     node.cleanTimer = setTimeout(function(){
                                         node.status({}); //clean
@@ -267,14 +267,14 @@ module.exports = function(RED) {
                             node.status({
                                 fill: "red",
                                 shape: "dot",
-                                text: "node-red-contrib-zigbee2mqtt-eb/out:status.no_payload"
+                                text: "node-red-contrib-zigbee2mqtt/out:status.no_payload"
                             });
                         }
                     } else {
                         node.status({
                             fill: "red",
                             shape: "dot",
-                            text: "node-red-contrib-zigbee2mqtt-eb/out:status.no_device"
+                            text: "node-red-contrib-zigbee2mqtt/out:status.no_device"
                         });
                     }
                 });
@@ -283,7 +283,7 @@ module.exports = function(RED) {
                 node.status({
                     fill: "red",
                     shape: "dot",
-                    text: "node-red-contrib-zigbee2mqtt-eb/out:status.no_server"
+                    text: "node-red-contrib-zigbee2mqtt/out:status.no_server"
                 });
             }
         }
