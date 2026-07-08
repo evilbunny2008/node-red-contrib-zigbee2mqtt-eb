@@ -4,7 +4,7 @@
     "email": "andrey_popov@me.com"
   },
   "name": "node-red-contrib-zigbee2mqtt",
-  "description": "Fork of Zigbee2mqtt connectivity nodes for node-red",
+  "description": "Zigbee2mqtt connectivity nodes for node-red",
   "version": "3.0.0",
   "dependencies": {
     "@viz-js/viz": "^3.28.0",
