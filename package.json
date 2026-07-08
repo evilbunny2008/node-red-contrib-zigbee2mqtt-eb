@@ -38,6 +38,6 @@
     "url": "git+https://github.com/andreypopov/node-red-contrib-zigbee2mqtt.git"
   },
   "bugs": {
-    "url": "https://github.com/andreypopov/node-red-contrib-zigbee2mqtt/issues"
+    "url": "https://github.com/andreypopov/node-red-contrib-zigbee2mqtt/issues/"
   }
 }
