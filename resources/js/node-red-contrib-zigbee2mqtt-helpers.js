@@ -159,14 +159,12 @@ class Zigbee2MqttEditor {
                     $.each(value.features, function(index2, value2) {
                         if ('property' in value2) {
                             let endpoint = value.endpoint || value2.endpoint;
-                            let label = value2.property + (value2.unit ? ', ' + value2.unit : '');
-                            $('<option value="' + value2.property + '">' + label + '</option>')
+                            $('<option value="' + value2.property + '">' + value2.property + (value2.unit ? ', ' + value2.unit : '') + '</option>')
                                 .appendTo(html);
                         }
                     });
                 } else if ('property' in value) {
-                    let label = value.property + (value.unit ? ', ' + value.unit : '');
-                    $('<option value="' + value.property + '">' + label + '</option>')
+                    $('<option value="' + value.property + '">' + value.property + (value.unit ? ', ' + value.unit : '') + '</option>')
                         .appendTo(html);
                 }
             });
