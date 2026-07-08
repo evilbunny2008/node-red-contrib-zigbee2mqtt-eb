@@ -158,12 +158,15 @@ class Zigbee2MqttEditor {
                 if ('features' in value) {
                     $.each(value.features, function(index2, value2) {
                         if ('property' in value2) {
-                            $('<option  value="' + value2.property + '">' + value2.name + (value2.unit ? ', ' + value2.unit : '') + '</option>')
+                            let endpoint = value.endpoint || value2.endpoint;
+                            let label = value2.property + (value2.unit ? ', ' + value2.unit : '');
+                            $('<option value="' + value2.property + '">' + label + '</option>')
                                 .appendTo(html);
                         }
                     });
                 } else if ('property' in value) {
-                    $('<option  value="' + value.property + '">' + value.name + (value.unit ? ', ' + value.unit : '') + '</option>')
+                    let label = value.property + (value.unit ? ', ' + value.unit : '');
+                    $('<option value="' + value.property + '">' + label + '</option>')
                         .appendTo(html);
                 }
             });
@@ -184,6 +187,19 @@ class Zigbee2MqttEditor {
             that.getDevicePropertyInput().val(that.getDevicePropertyInput().find('option').eq(0).attr('value'));
         }
         that.getDevicePropertyInput().multipleSelect('refresh');
+    }
+
+    buildLabel(name, property, unit) {
+        let label = name + (unit ? ', ' + unit : '');
+        if (property !== name) {
+            // e.g. property "state_l1" vs name "state" -> suffix "l1"
+            // or property "inching_control_1" vs name "inching_control" -> suffix "1"
+            let suffix = property.slice(name.length).replace(/^_/, '');
+            if (suffix) {
+                label += ' (' + suffix + ')';
+            }
+       }
+       return label;
     }
 
     buildDeviceOptionsInput() {
