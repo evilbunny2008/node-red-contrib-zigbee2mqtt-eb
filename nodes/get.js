@@ -38,7 +38,7 @@ module.exports = function(RED) {
         }
     }
 
-    RED.nodes.registerType('zigbee2mqtt-get', Zigbee2mqttNodeGet);
+    RED.nodes.registerType('zigbee2mqtt-eb-get', Zigbee2mqttNodeGet);
 };
 
 

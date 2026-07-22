@@ -1,4 +1,4 @@
-<script type="text/x-red" data-template-name="zigbee2mqtt-get">
+<script type="text/x-red" data-template-name="zigbee2mqtt-eb-get">
     <link rel="stylesheet" href="resources/node-red-contrib-zigbee2mqtt-eb/css/multiple-select.css" type="text/css" />
     <link rel="stylesheet" href="resources/node-red-contrib-zigbee2mqtt-eb/css/common.css" type="text/css" />
 
@@ -36,7 +36,7 @@
 </script>
 
 <script type='text/javascript'>
-    RED.nodes.registerType('zigbee2mqtt-get', {
+    RED.nodes.registerType('zigbee2mqtt-eb-get', {
         category: 'Zigbee2mqtt',
         color: '#FDBF48',
         defaults: {
@@ -44,7 +44,7 @@
                 value: ''
             },
             server: {
-                type: 'zigbee2mqtt-server',
+                type: 'zigbee2mqtt-eb-server',
                 required: true
             },
             friendly_name: {

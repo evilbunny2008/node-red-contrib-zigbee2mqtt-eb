@@ -116,7 +116,7 @@ module.exports = function(RED) {
             });
         }
     }
-    RED.nodes.registerType('zigbee2mqtt-bridge', Zigbee2mqttNodeBridge);
+    RED.nodes.registerType('zigbee2mqtt-eb-bridge', Zigbee2mqttNodeBridge);
 };
 
 

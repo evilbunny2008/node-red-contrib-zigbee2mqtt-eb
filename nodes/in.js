@@ -116,7 +116,7 @@ module.exports = function(RED) {
         }
 
     }
-    RED.nodes.registerType('zigbee2mqtt-in', Zigbee2mqttNodeIn);
+    RED.nodes.registerType('zigbee2mqtt-eb-in', Zigbee2mqttNodeIn);
 };
 
 

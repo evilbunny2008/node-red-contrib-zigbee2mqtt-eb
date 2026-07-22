@@ -849,6 +849,6 @@ module.exports = function(RED) {
         }
     }
 
-    RED.nodes.registerType('zigbee2mqtt-server', ServerNode, {});
+    RED.nodes.registerType('zigbee2mqtt-eb-server', ServerNode, {});
 };
 

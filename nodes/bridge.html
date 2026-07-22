@@ -20,7 +20,7 @@
 
 
 
-<script type="text/x-red" data-template-name="zigbee2mqtt-bridge">
+<script type="text/x-red" data-template-name="zigbee2mqtt-eb-bridge">
     <link rel="stylesheet" href="resources/node-red-contrib-zigbee2mqtt-eb/css/multiple-select.css" type="text/css" />
     <link rel="stylesheet" href="resources/node-red-contrib-zigbee2mqtt-eb/css/common.css" type="text/css" />
     <link rel="stylesheet" href="resources/node-red-contrib-zigbee2mqtt-eb/tokeninput/token-input-facebook.css" type="text/css" />
@@ -150,7 +150,7 @@
 </script>
 
 <script type='text/javascript'>
-    RED.nodes.registerType('zigbee2mqtt-bridge', {
+    RED.nodes.registerType('zigbee2mqtt-eb-bridge', {
         category: 'Zigbee2mqtt',
         color: '#FDBF48',
         defaults: {
@@ -158,7 +158,7 @@
                 value: ""
             },
             server: {
-                type: "zigbee2mqtt-server",
+                type: "zigbee2mqtt-eb-server",
                 required: true
             },
             topic: {

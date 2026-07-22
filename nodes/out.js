@@ -351,7 +351,7 @@ module.exports = function(RED) {
     }
 
 
-    RED.nodes.registerType('zigbee2mqtt-out', Zigbee2mqttNodeOut);
+    RED.nodes.registerType('zigbee2mqtt-eb-out', Zigbee2mqttNodeOut);
 };
 
 
