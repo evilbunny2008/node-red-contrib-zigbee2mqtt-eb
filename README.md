@@ -49,11 +49,11 @@ Extra features:
 * groups support
 * network map generation
 
-<img src="https://github.com/evilbunny2008/node-red-contrib-zigbee2mqtt-eb/blob/master/readme/1.png?raw=true">
-<img src="https://github.com/evilbunny2008/node-red-contrib-zigbee2mqtt-eb/blob/master/readme/2.png?raw=true">
-<img src="https://github.com/evilbunny2008/node-red-contrib-zigbee2mqtt-eb/blob/master/readme/3.png?raw=true">
-<img src="https://github.com/evilbunny2008/node-red-contrib-zigbee2mqtt-eb/blob/master/readme/4.png?raw=true">
-<img src="https://github.com/evilbunny2008/node-red-contrib-zigbee2mqtt-eb/blob/master/readme/5.png?raw=true">
+<img src="https://github.com/evilbunny2008/node-red-contrib-zigbee2mqtt-eb/blob/main/readme/1.png?raw=true">
+<img src="https://github.com/evilbunny2008/node-red-contrib-zigbee2mqtt-eb/blob/main/readme/2.png?raw=true">
+<img src="https://github.com/evilbunny2008/node-red-contrib-zigbee2mqtt-eb/blob/main/readme/3.png?raw=true">
+<img src="https://github.com/evilbunny2008/node-red-contrib-zigbee2mqtt-eb/blob/main/readme/4.png?raw=true">
+<img src="https://github.com/evilbunny2008/node-red-contrib-zigbee2mqtt-eb/blob/main/readme/5.png?raw=true">
 
 # Support
 Developing and supporting this plugin needs time and efforts. Appreciate your support on [Patreon](https://www.patreon.com/bePatron?u=12661781). Here, you can sign up to be a member and help support my project.
