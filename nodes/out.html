@@ -199,7 +199,7 @@
                             label: 'zigbee2mqtt',
                             icon: 'icons/node-red-contrib-zigbee2mqtt/icon.png',
                             options: [
-                                {'value':'state', 'label':'State (on|off|toggle)'},
+                                {'value':'state', 'label':'State (on|off|toggle|lock|unlock|open|close)'},
                                 {'value':'state_l1', 'label':'State_l1 (on|off|toggle)'},
                                 {'value':'state_l2', 'label':'State_l2 (on|off|toggle)'},
                                 {'value':'state_l3', 'label':'State_l3 (on|off|toggle)'},
@@ -257,7 +257,9 @@
                             {'value':'off', 'label':'Off'},
                             {'value':'toggle', 'label':'Toggle'},
                             {'value':'lock', 'label':'Lock'},
-                            {'value':'unlock', 'label':'Unlock'}
+                            {'value':'unlock', 'label':'Unlock'},
+                            {'value':'open', 'label':'Open'},
+                            {'value':'close', 'label':'Close'}
                         ];
                     } else if ('color_temp' === command) {
                         options = [
