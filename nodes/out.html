@@ -77,7 +77,7 @@
 
 <script type='text/javascript'>
     RED.nodes.registerType('zigbee2mqtt-eb-out', {
-        category: 'Zigbee2mqtt',
+        category: 'ZigBee2MQTT',
         color: '#FDBF48',
         align: 'right',
         defaults: {
@@ -196,7 +196,7 @@
                         //z2m commands
                         {
                             value: 'z2m_cmd',
-                            label: 'zigbee2mqtt',
+                            label: 'zigbee2mqtt-eb',
                             icon: 'icons/node-red-contrib-zigbee2mqtt-eb/icon.png',
                             options: [
                                 {'value':'state', 'label':'State (on|off|toggle|lock|unlock|open|close)'},
@@ -277,7 +277,7 @@
                     if (options.length) {
                         const predefinedValuesPayload = {
                             value: 'z2m_payload',
-                            label: 'zigbee2mqtt',
+                            label: 'zigbee2mqtt-eb',
                             icon: 'icons/node-red-contrib-zigbee2mqtt-eb/icon.png',
                             options
                         };
