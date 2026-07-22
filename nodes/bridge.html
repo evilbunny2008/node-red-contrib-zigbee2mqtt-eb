@@ -344,7 +344,7 @@
                     });
                 });
                 $('#z2m_map_fullscreen_btn').off('click').on('click', function () {
-                    var url = '/zigbee2mqtt/showMap?controllerID='+node.server;
+                    var url = '/zigbee2mqtt-eb/showMap?controllerID='+node.server;
 
                     var win = window.open(url, '_blank');
                     if (win) {
