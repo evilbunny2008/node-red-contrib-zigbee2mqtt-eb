@@ -1,6 +1,6 @@
 <script type="text/x-red" data-template-name="zigbee2mqtt-out">
-    <link rel="stylesheet" href="resources/node-red-contrib-zigbee2mqtt-eb/css/multiple-select.css" type="text/css" />
-    <link rel="stylesheet" href="resources/node-red-contrib-zigbee2mqtt-eb/css/common.css" type="text/css" />
+    <link rel="stylesheet" href="resources/node-red-contrib-zigbee2mqtt/css/multiple-select.css" type="text/css" />
+    <link rel="stylesheet" href="resources/node-red-contrib-zigbee2mqtt/css/common.css" type="text/css" />
 
     <div class="form-row">
         <label for="node-input-name" class="l-width"><i class="fa fa-bookmark"></i> <span data-i18n="label.name"></span></label>
@@ -197,9 +197,9 @@
                         {
                             value: 'z2m_cmd',
                             label: 'zigbee2mqtt',
-                            icon: 'icons/node-red-contrib-zigbee2mqtt-eb/icon.png',
+                            icon: 'icons/node-red-contrib-zigbee2mqtt/icon.png',
                             options: [
-                                {'value':'state', 'label':'State (on|off|toggle)'},
+                                {'value':'state', 'label':'State (on|off|toggle|lock|unlock|open|close)'},
                                 {'value':'state_l1', 'label':'State_l1 (on|off|toggle)'},
                                 {'value':'state_l2', 'label':'State_l2 (on|off|toggle)'},
                                 {'value':'state_l3', 'label':'State_l3 (on|off|toggle)'},
@@ -234,12 +234,12 @@
                         {
                             value:'homekit',
                             label:'homekit',
-                            icon:'icons/node-red-contrib-zigbee2mqtt-eb/homekit-logo.png',
+                            icon:'icons/node-red-contrib-zigbee2mqtt/homekit-logo.png',
                             options:[{'value':'homekit', 'label':'Apple Homekit data format'}]
                         },
                         {
                             value: 'nothing',
-                            label: RED._("node-red-contrib-zigbee2mqtt-eb/server:editor.nothing"),
+                            label: RED._("node-red-contrib-zigbee2mqtt/server:editor.nothing"),
                             options:['']
                         },
                         {value:'str', label: 'str'},
@@ -257,7 +257,9 @@
                             {'value':'off', 'label':'Off'},
                             {'value':'toggle', 'label':'Toggle'},
                             {'value':'lock', 'label':'Lock'},
-                            {'value':'unlock', 'label':'Unlock'}
+                            {'value':'unlock', 'label':'Unlock'},
+                            {'value':'open', 'label':'Open'},
+                            {'value':'close', 'label':'Close'}
                         ];
                     } else if ('color_temp' === command) {
                         options = [
@@ -276,7 +278,7 @@
                         const predefinedValuesPayload = {
                             value: 'z2m_payload',
                             label: 'zigbee2mqtt',
-                            icon: 'icons/node-red-contrib-zigbee2mqtt-eb/icon.png',
+                            icon: 'icons/node-red-contrib-zigbee2mqtt/icon.png',
                             options
                         };
                         return [predefinedValuesPayload, ...types]
